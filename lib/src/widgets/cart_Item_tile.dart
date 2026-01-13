@@ -29,7 +29,7 @@ class CartItemTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           /// Product Image
-          Image.asset(item.image, height: 80, width: 80, fit: BoxFit.contain),
+          Image.network(item.image, height: 80, width: 80, fit: BoxFit.contain),
 
           const SizedBox(width: 12),
 
@@ -38,6 +38,7 @@ class CartItemTile extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(height: 6),
                 Text(
                   item.name,
                   style: const TextStyle(
@@ -79,12 +80,16 @@ class CartItemTile extends StatelessWidget {
           /// Right Column
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              GestureDetector(
-                onTap: () => controller.removeItem(item),
-                child: const Icon(Icons.close, size: 20),
+              IconButton(
+                padding: EdgeInsets.zero,
+                onPressed: () {
+                  controller.removeItem(item);
+                },
+                icon: const Icon(Icons.close, size: 22),
               ),
-              const SizedBox(height: 30),
+
               Obx(
                 () => Text(
                   "\$${(item.price * item.quantity.value).toStringAsFixed(2)}",

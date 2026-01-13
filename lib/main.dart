@@ -7,8 +7,8 @@ import 'package:nectar_app/src/utils/colors.dart';
 import 'src/pages/home_screen.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await GetStorage.init();
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await GetStorage.init();
   runApp(const MyApp());
 }
 

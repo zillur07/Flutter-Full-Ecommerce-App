@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nectar_app/src/utils/colors.dart';
@@ -40,7 +41,15 @@ class ProductCard extends StatelessWidget {
             ),
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Image.asset(imagePath, height: 90, width: double.infinity),
+              child: CachedNetworkImage(
+                imageUrl: imagePath,
+                height: 90,
+                width: double.infinity,
+
+                placeholder: (context, url) =>
+                    const Center(child: CircularProgressIndicator()),
+                errorWidget: (context, url, error) => const Icon(Icons.error),
+              ),
             ),
           ),
 

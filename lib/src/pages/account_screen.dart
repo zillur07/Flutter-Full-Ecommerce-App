@@ -332,6 +332,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:nectar_app/src/pages/my_orders_screen.dart';
 import 'package:nectar_app/src/pages/welcome_screen.dart';
 import 'package:nectar_app/src/utils/colors.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -477,7 +478,41 @@ class _AccountScreenState extends State<AccountScreen> {
     return Column(
       children: [
         InkWell(
-          onTap: () {},
+          onTap: () {
+            switch (title) {
+              case "Orders":
+                Get.to(() => MyOrdersScreen());
+                break;
+
+              case "My Details":
+                // Get.to(() => MyDetailsScreen());
+                break;
+
+              case "Delivery Address":
+                //  Get.to(() => DeliveryAddressScreen());
+                break;
+
+              case "Payment Methods":
+                //  Get.to(() => PaymentMethodsScreen());
+                break;
+
+              case "Promo Code":
+                // Get.to(() => PromoCodeScreen());
+                break;
+
+              case "Notifications":
+                // Get.to(() => NotificationsScreen());
+                break;
+
+              case "Help":
+                // Get.to(() => HelpScreen());
+                break;
+
+              case "About":
+                //    Get.to(() => AboutScreen());
+                break;
+            }
+          },
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 14),
             child: Row(
