@@ -1,16 +1,20 @@
-# nectar_app
+# Modern Ecommerce Application
 
-A new Flutter project.
+## Create by Zillur Rahman
 
-## Getting Started
+## Description
+This is Modern ecommerce application
 
-This project is a starting point for a Flutter application.
+## Dependencies
+    cupertino_icons: ^1.0.8
+    get: ^4.6.5
+    flutter_svg: ^2.2.3
+    shared_preferences: ^2.5.4
+    http: ^1.6.0
+    get_storage: ^2.1.1
+    cached_network_image: ^3.4.1
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Modern Ecommerce Application With API
+<img width="616" height="624" alt="Image" src="https://github.com/user-attachments/assets/d5c7d590-35be-44e4-bf98-c565870cbf3e" />
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
