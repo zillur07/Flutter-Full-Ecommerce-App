@@ -19,9 +19,17 @@ class MyOrdersScreen extends StatelessWidget {
           "My Orders",
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
         ),
+
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(1),
           child: Container(height: 1.5, color: Colors.grey.withOpacity(0.3)),
+        ),
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_new_rounded,
+            color: Colors.black,
+          ),
+          onPressed: () => Get.back(),
         ),
       ),
       body: Obx(() {

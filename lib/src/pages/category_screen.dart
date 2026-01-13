@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:nectar_app/src/pages/category_products_screen.dart';
 import '../controllers/category_controller.dart';
 import '../widgets/category_card.dart';
 import '../widgets/search_field.dart';
@@ -57,7 +58,10 @@ class CategoryScreen extends StatelessWidget {
                     backgroundColor: category.bgColor,
                     borderColor: category.borderColor,
                     onTap: () {
-                      print('${category.name} tapped');
+                      Get.to(
+                        () =>
+                            CategoryProductsScreen(categoryName: category.name),
+                      );
                     },
                   );
                 },
