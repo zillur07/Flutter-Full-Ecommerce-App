@@ -70,7 +70,6 @@ class ProductCard extends StatelessWidget {
 
           const Spacer(),
 
-          // Bottom row: price left, icon right
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
             child: Row(
